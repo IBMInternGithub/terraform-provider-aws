@@ -651,17 +651,11 @@ func Provider() terraform.ResourceProvider {
 			// To avoid regressions, we will add a new resource for each and they both point
 			// back to the old ALB version. IF the Terraform supported aliases for resources
 			// this would be a whole lot simplier
-			"aws_alb":                         resourceAwsLb(),
 			"aws_lb":                          resourceAwsLb(),
-			"aws_alb_listener":                resourceAwsLbListener(),
 			"aws_lb_listener":                 resourceAwsLbListener(),
-			"aws_alb_listener_certificate":    resourceAwsLbListenerCertificate(),
 			"aws_lb_listener_certificate":     resourceAwsLbListenerCertificate(),
-			"aws_alb_listener_rule":           resourceAwsLbbListenerRule(),
 			"aws_lb_listener_rule":            resourceAwsLbbListenerRule(),
-			"aws_alb_target_group":            resourceAwsLbTargetGroup(),
 			"aws_lb_target_group":             resourceAwsLbTargetGroup(),
-			"aws_alb_target_group_attachment": resourceAwsLbTargetGroupAttachment(),
 			"aws_lb_target_group_attachment":  resourceAwsLbTargetGroupAttachment(),
 		},
 		ConfigureFunc: providerConfigure,
